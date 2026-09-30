@@ -1,0 +1,16 @@
+import csv
+with open ('classroom.csv', mode='w') as file:
+    file_writer = csv.writer(file, delimiter=',')
+    file_writer.writerow([' Фамилия', ' Имя', ' Оценка за контрольную'])
+    file_writer.writerow(['Казлов', 'Егор', '4'])
+    file_writer.writerow(['Дубин', 'Денис', '2'])
+    file_writer.writerow(['Хрустенец', 'Дима', '3'])
+    file_writer.writerow(['Майорова', 'Алиса', '5'])
+    
+with open ('classroom.csv', mode='r') as file:
+    file_reader = csv.reader(file, delimiter=',')
+    next(file_reader)
+    for row in file_reader:
+        grade = int(row[2])
+        if grade <3:
+            print(f'{row[0]} {row[1]} получил {grade}')
