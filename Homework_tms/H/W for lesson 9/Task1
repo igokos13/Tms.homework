@@ -1,0 +1,12 @@
+def copy_nonempty_lines(source_path: str, target_path: str)->int:
+    count =0
+    with open(source_path, 'r') as file:
+        with open(target_path, 'w') as file_wr:
+            for line in file:
+                clear_line = line.strip()
+                if clear_line:
+                    file_wr.write(clear_line + '\n')
+                    count +=1
+            return count
+result = copy_nonempty_lines('source_path.txt', 'target_path.txt')
+print(f'Результат: {result}')
