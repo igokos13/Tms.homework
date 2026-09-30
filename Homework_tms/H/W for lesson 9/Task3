@@ -1,0 +1,30 @@
+import os
+#БЕЗ ЭТОГО НЕ НАХОДИТ ФАЙЛ
+script_dir = os.path.dirname(os.path.abspath(__file__))
+file_path = os.path.join(script_dir, 'input.txt')
+
+with open(file_path, 'r') as file:
+    lines = file.readlines()
+
+total_counts = {}
+
+for line in lines:
+    line = line.strip()
+    
+    if not line:
+        continue
+        
+    words = line.split()
+    
+    for word in words:
+        if word in total_counts:
+            total_counts[word] += 1
+        else:
+            total_counts[word] = 1
+
+with open('output.txt', 'w', encoding='utf-8') as file_f:
+    for word, count in total_counts.items():
+        result_line = f'{word} - {count}\n'
+        file_f.write(result_line)
+
+print('Проверьте файл output.txt')
