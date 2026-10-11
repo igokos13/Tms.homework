@@ -58,9 +58,9 @@ class Warehouse:
         for tovar in self.__products:
             tovar.print_info()
         
-p1 = Product("Яблоко", "Пятерочка", 100'руб')
-p2 = Product("Банан", "Магнит", 80'руб')
-p3 = Product("Груша", "Перекресток", 150'руб')
+p1 = Product("Яблоко", "Пятерочка", 100)
+p2 = Product("Банан", "Магнит", 80)
+p3 = Product("Груша", "Перекресток", 150)
 
 Summa = p1+p2
 print (f'Сумма за яблоки и бананы: {Summa}')
