@@ -43,7 +43,7 @@ class Bus:
         print(f'Скорость увелична до {self.speed}')
     
     def decrease_speed(self, value):
-        self.speed +=value
+        self.speed -=value
         if self.speed<0:
             self.speed=0
         print(f'Скорость уменьшена до {self.speed}')
@@ -70,6 +70,6 @@ if __name__=='__main__':
     print('Есть свободные места ?', bus.free_seets)
     bus.increase_speed(20)
     bus.increase_speed(120)
-    bus.increase_speed(60)
+    bus.decrease_speed(20)
     print('Занятые места: ', bus.seats) #Было тяжело 
     
