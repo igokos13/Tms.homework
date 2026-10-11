@@ -14,7 +14,7 @@ class Product:
         return self.__price
     
     def print_info(self):
-        print(f'товар{self.__name_product}, магазин {self.__name_shop}, цена {self.__price}')
+        print(f'товар{self.__name_product}, магазин {self.__name_shop}, цена {self.__price} руб')
     
     def __add__(self, other):
        return  self.__price + other.get_price()
