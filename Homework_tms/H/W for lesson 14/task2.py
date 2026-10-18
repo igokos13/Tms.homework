@@ -6,6 +6,6 @@ user_number = int(input('Введите кол-во цифр: '))
 my_cycla = cyclicality(user_number)
 
 for num in my_cycla:
-    print(num)
+    print(num, end='-')
 
 cyclicality(user_number)
